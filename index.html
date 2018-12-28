@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5音乐相册-珠峰培训</title>
+
+    <!-- IMPORT CSS -->
+    <link rel="stylesheet" href="css/zhouxiaotian.min.css">
+  
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- COMPUTED REM -->
+    <script>
+        ~ function () {
+            function computed() {
+                var HTML = document.documentElement,
+                    deviceW = HTML.clientWidth,
+                    designW = 375,
+                    maxW = 750,
+                    ratio = deviceW / designW;
+                deviceW >= maxW ? ratio = maxW / designW : null;
+                HTML.style.fontSize = ratio * 100 + 'px';
+            }
+            computed();
+            window.addEventListener('resize', computed, false);
+        }();
+    </script>
+</head>
+
+<body>
+    
+    <!-- MAIN存放所有内容：它最大宽度750 -->
+    <main class="mainBox">
+        <!-- 音乐 -->
+        <a href="javascript:;" class="musicBox move"></a>
+    <audio>
+            <source src="audio/remembrance_of_youth.mp3" type="aduio/mpeg">
+            <source src="audio/remembrance_of_youth.wav" type="aduio/wav">
+            <source src="audio/remembrance_of_youth.ogg" type="aduio/ogg">
+            <!-- 当前浏览器不兼容AUDIO（或者此处使用FLASH播放器播放） -->
+        </audio>
+
+    <!-- controls:用浏览器默认播放器播放（显示默认播放器）
+    loop：循环播放
+autoplay：自动播放
+preload：预加载方式
+    auto 加载页面的时候就把音频文件进行加载（导致页面第一次加载速度慢）
+    metadata 加载页面的时候只加载音频的基础信息（播放的时候这才加载主要内容）
+    none 加载页面的时候什么都不加载 -->
+<audio src="audio/remembrance_of_youth.m4a" loop autoplay preload="none" id="musicAudio"></audio>
+<!-- poster:设置封面图 -->
+        <!-- SWIPER滑屏骨架（固定） -->
+        <div class="swiper-container">
+            
+            <div class="swiper-wrapper">
+                <!-- PAGE 1 -->
+                <div class="swiper-slide page1">
+                    <!-- class='ani':想让谁有动画，这个必须加
+                    swiper-animate-effect：设置动画效果（animate.min.css中支持的动画效果都可以用，或者自己基于@keyframe设置动画效果也可以） -->
+                    <img src="image/huaping/index_1.png" alt="" class="ani"
+                    swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" 
+                    swiper-animate-delay="0s">
+                    <img src="image/huaping/index_2.png" alt=""class="ani"
+                    swiper-animate-effect="bounceInUp" swiper-animate-duration="1s"
+                    swiper-animate-delay="0s">
+                    <img src="image/huaping/index_3.png" alt=""class="ani"
+                    swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+                    swiper-animate-delay="0.5s">
+                    <img src="image/huaping/index_4.png" alt=""class="ani"
+                    swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+                    <img src="image/huaping/index_5.png" alt=""class="ani"
+                    swiper-animate-effect="zoomIn" swiper-animate-duration="1s"
+                    swiper-animate-delay="1.5s">
+
+                </div>
+
+                <!-- PAGE 2 -->
+                <div class="swiper-slide page2">
+
+                    <img src="image/huaping/page2_2.png" alt="">
+                    <img src="image/huaping/page2_3.png" alt="">
+                    <img src="image/huaping/page2_4.png" alt="">
+                    <img src="image/huaping/page2_5.png" alt="">
+
+                    <img src="image/huaping/page2_7.png" alt="">
+                    <img src="image/huaping/page2_8.png" alt="">
+                    <img src="image/huaping/page2_9.png" alt="">
+                    <div class="text">
+                        <p>劝君莫惜金缕衣</p>
+                        <p>劝君惜取少年时</p>
+                        <p>有花堪折直须折</p>
+                        <p>莫待无花空折枝</p>
+
+                    </div>
+
+                    <div class="photo">
+                        <img src="image/huaping/person_1.jpg" alt="">
+                        <!-- <video src="audio/stroke_on_everything.mp4"></video> -->
+                    </div>
+                </div>
+
+                <!-- PAGE 3 -->
+                <div class="swiper-slide page3">
+                    <img src="image/huaping/page3_1.png" alt="">
+                    <img src="image/huaping/page3_3.png" alt="">
+                    <div class="concat">
+                        <img src="image/huaping/zhou.png" alt="">
+                        <div class="text">
+                            <p>扫码领取</p>
+                            <p>课程视频</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 滑动提示按钮 -->
+        <a href="javascript:;" class="previousTip"></a>
+    </main>
+
+    <!-- IMPORT JS -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate1.0.3.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+
+</body>
+
+</html>
